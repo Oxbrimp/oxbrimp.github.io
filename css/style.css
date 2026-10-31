@@ -1,0 +1,98 @@
+
+/* !!!!! Presets / Variables !!!!! */
+
+/* Sunrise Theme */
+[data-theme="light"]{
+    --background: #fff3d2;
+    --foreground: #222222;
+    --header-background: #fff3d2;
+    --accent: #cc5200;
+    --h1-color: #66baff;
+    --loop-set: linear-gradient(270deg, #ff0000, #ff8800, #ffff00, #00ff88, #0088ff, #aa00ff, #ff0000);
+
+}
+
+/* Twilight Theme */
+[data-theme="dark"] {
+    --background: #16161D;
+    --foreground: #404050;
+    --header-background: #16161D; /* beloved Eigengrau */
+    --accent: #66baff;
+    --h1-color: #a9ebe5;
+    --loop-set: linear-gradient(270deg, #4400ff, #9d69ff, #83265c, #bd57b8);
+}
+
+
+
+
+h1 {
+    background: var(--loop-set);
+
+    background-size: 400% 400%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradient-animation 30s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+
+body {
+    /*background-color: #16161D; Eigengrau */
+    background-color: var(--background);
+    color : var(--foreground);
+    font-family : Arial;
+    text-align: center;
+}
+
+header{
+    background-color: var(--header-background);
+    padding: 20px;
+    margin-top : 100px;
+}
+
+nav {
+    background-color : var(--header-background);
+    padding: 15px;
+}
+
+a {
+    color: var(--accent)
+}
+
+
+/*
+h1 {
+    color: #7fc481
+    color : var(--h1-color);
+}
+*/
+
+footer {
+    background-color: var(--header-background);
+    padding: 15px
+    /*margin-top : 200px*/
+    /*color : #7e8f92;*/
+}
+
+
+
