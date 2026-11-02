@@ -23,6 +23,27 @@
 }
 
 
+[data-font-size="small"]
+{
+    --font-size : 16px;
+}
+
+[data-font-size="medium"]
+{
+    --font-size : 18px;
+}
+
+[data-font-size="large"]
+{
+    --font-size : 22px;
+}
+
+
+
+html
+{
+    font-size : var(--font-size)
+}
 
 
 h1 {
@@ -36,6 +57,7 @@ h1 {
 
     animation: gradient-animation 30s ease infinite;
 }
+
 
 @keyframes gradient-animation {
     0% {
@@ -52,16 +74,13 @@ h1 {
 }
 
 
-
-
-
-
 body {
     /*background-color: #16161D; Eigengrau */
     background-color: var(--background);
     color : var(--foreground);
     font-family : Arial;
     text-align: center;
+    font-size : 1rem;
 }
 
 header{
